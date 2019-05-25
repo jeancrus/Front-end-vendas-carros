@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  padding: 40px 2%;
+}
+
+header .logo img {
+  width: 100%;
+  max-width: 208px;
+  max-height: 82px;
+  float: left;
+}
+
+/* menu desktop */
+header nav.menu-desktop {
+  float: right;
+}
+
+header nav.menu-desktop ul {
+  list-style-type: none;
+  padding: calc(82px / 2) 0;
+}
+
+header nav.menu-desktop ul li {
+  float: left;
+  padding: 0 20px;
+}
+
+header nav.menu-desktop li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+}
+/***/
+
+/* menu mobile */
+header nav.menu-mobile {
+  display: none;
+  float: right;
+  background-image: url("../imagens/icon_menu.png");
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-size: 100% 100%;
+  margin-top: 21px;
+}
+
+header nav.menu-mobile ul {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 160px;
+  background: rgba(255, 255, 255);
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid red;
+}
+
+header nav.menu-mobile:hover ul {
+  display: block;
+}
+
+header nav.menu-mobile ul li {
+  padding: 10px 0;
+}
+
+/***/
+
+/***/
+
+/* Secao banner */
+
+section.banner {
+  width: 100%;
+  max-height: 800px;
+  background-color: black;
+  background-image: url("../imagens/bg.jpg");
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  border-bottom: 5px solid red;
+}
+
+section.banner .container {
+  max-width: 500px;
+  float: left;
+  margin: 8% 12%;
+}
+
+section.banner .box-wraper1 {
+  width: 100%;
+}
+
+section.banner .container .box-vermelho {
+  margin: 20px 0;
+  width: 50%;
+  text-align: center;
+  background-image: url("../imagens/box-text.png");
+  background-size: 100% 100%;
+  padding: 10px 0;
+}
+
+section.banner .container .box-vermelho h2 {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+section.banner .container .box-vermelho:nth-of-type(1) {
+  position: relative;
+  left: -10px;
+}
+
+section.banner .container .box-vermelho:nth-of-type(2) {
+  position: relative;
+  width: 40%;
+  left: -20px;
+}
+
+section.banner .container .box-vermelho:nth-of-type(3) {
+  position: relative;
+  width: 30%;
+  left: -30px;
+}
+
+section.banner .container .box-branco {
+  position: relative;
+  left: -40px;
+  width: 75%;
+  background-image: url("../imagens/box-white-text.png");
+  background-size: 100% 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+section.banner .container .box-branco h2 {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/***/
+
+/* Secao chamada1 */
+
+/***/
+
+@media screen and (max-width: 768px) {
+  section.banner {
+    min-height: 500px;
+  }
+
+  header nav.menu-desktop {
+    display: none;
+  }
+
+  header nav.menu-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  section.banner {
+    background-size: cover;
+    background-position: center;
+  }
+
+  section.banner .container {
+    float: none;
+    padding: 0;
+    max-width: 80%;
+  }
+
+  section.banner .container .box-wraper1 {
+    padding: 40px 0 0 20px;
+  }
+
+  section.banner .container .box-vermelho:nth-of-type(1) {
+    width: 80%;
+  }
+
+  section.banner .container .box-vermelho:nth-of-type(2) {
+    width: 70%;
+  }
+
+  section.banner .container .box-vermelho:nth-of-type(3) {
+    width: 60%;
+  }
+
+  section.banner .container .box-vermelho h2 {
+    font-size: 20px;
+  }
+
+  section.banner .container .box-branco {
+    width: 100%;
+  }
+
+  section.banner .container .box-branco h2 {
+    color: black;
+    font-size: 15px;
+  }
+}
